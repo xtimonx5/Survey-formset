@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}
+    Register title
+{% endblock %}
+{% block title_tab %}
+    Register title_tab
+{% endblock %}
+{% block content_tab %}
+<div class="large offset-3 large-6 columns">
+    <form action="/account/register/" method="POST">
+        {% csrf_token %}
+        <label for="username"> Username </label>
+        <input type="text" name="username" id="username">
+        <label for="email">Email</label>
+        <input type="email" name="email", id="email">
+        <label for="password">Password</label>
+        <input type="password" name="password1" id="password1">
+        <label for="password2" name="password2" id="password2">Repeat Password </label>
+        <input type="password" name="password2" id="password2">
+        <button class="btn waves-effect waves-light " type="submit" name="action">Register
+                <i class="material-icons right">send</i>
+        </button>
+    </form>
+
+
+</div>
+
+
+{% endblock %}

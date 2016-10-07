@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'questionnaire',
     'questionnaire.templatetags',
     'rebar',
+    'loginsys',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -82,9 +83,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'HOST': 'localhost',
+        'PORT': '5555',
         'NAME': 'questionnaire_db',
         'USER': 'postgres',
-        'PASSWORD': 'postgres',
+        'PASSWORD': '1234',
     }
 }
 

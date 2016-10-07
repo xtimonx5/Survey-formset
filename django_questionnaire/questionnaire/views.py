@@ -112,7 +112,7 @@ class TakeQuestionnaire(FormView):
 
         return super(TakeQuestionnaire, self).form_valid(form=form)
 
-    @method_decorator(login_required)
+    @method_decorator(login_required(login_url='login'))
     def dispatch(self, *args, **kwargs):
         return super(TakeQuestionnaire, self).dispatch(*args, **kwargs)
 
